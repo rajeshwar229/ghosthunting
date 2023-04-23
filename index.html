@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>The Ghost Hunting</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
+       <!-- <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+        <script src="js/jquery-ui-1.10.3.custom.js" type="text/javascript"></script>-->
+</head>
+
+<body>
+<div class="intro">
+<span>Rajeshwar</span><span>Chinna</span><span>Presents</span>
+</div>
+<div class="entrance">
+    	<h1>Ghost Hunting</h1>
+		<div class="entranceBottons">
+			<button class="play">Play</button>
+			<button class="credits">Credits</button>
+			<button class="help">Help</button>
+			<button class="exit">Exit</button>
+		</div>
+		<span class="mute" title="Music on"></span>
+        <span class="sound" title="Sound on"></span>
+        <audio id="entranceMusic" loop sound=10>
+		<source src="audio/scr01.mp3" type="audio/mpeg"></audio>
+    </div>
+    <div class="creditsPage">
+        <ul>
+        	<li><img src="images/credits/pradeep.jpg" alt="Pradeep" title="Na kante Thope evvadu ledikkada" /><span>Pradeep Kumar Lakku</span></li>
+            <li><img src="images/credits/venky.jpg" alt="Pradeep" title="Assasin's Creed" /><span>Venkatesh Bellala</span></li>
+            <li><img src="images/credits/prakash.jpg" alt="Pradeep" title="Nu aapra Jaffaga" /><span>Prakash Kummari</span></li>
+            <li><img src="images/credits/rajesh.jpg" alt="Pradeep" title="Siggu padakra babu" /><span>Rajesh Putta</span></li>
+            <li><img src="images/credits/saikiran.jpg" alt="Pradeep" title="Pradeep Gadu Thope Asalu" /><span>Sai Kiran Raparti</span></li>
+            <li><img src="images/credits/tejaswini.jpg" alt="Pradeep" title="??????" /><span>Tejashwini Dugyala</span></li>
+        </ul>
+
+         <button class="back">back</button>
+    </div>
+    <div class="helpPage">
+    	<img src="images/helpPage.png" alt="help" width="70%"/>
+        <pre>
+        CONTROLS:
+        	Shoot - Left Click
+            	Pause - P	
+        </pre>
+        <button class="back">back</button>
+    </div>
+	<div class="game">
+    	<span class="bludBorder">
+    		<span class="blud"></span>
+        </span>
+    	<span class="score">Score:0</span>
+    	<audio id="gameMusic" loop>
+		<source src="audio/gameBgSound.mp3" type="audio/mp3"></audio>
+        <audio id="gunShoot">
+		<source src="audio/gs.mp3" type="audio/mp3"></audio>
+        <audio id="ghostCome">
+		<source src="audio/zombie3.mp3" type="audio/mp3"></audio>
+        <audio id="ghostDie">
+		<source src="audio/ZombieInPain.mp3" type="audio/mp3"></audio>
+        <audio id="ghostAttact">
+		<source src="audio/ghostAttack.mp3" type="audio/mp3"></audio>
+        <div class="gun">
+        	
+        </div>
+        <div class="bulletFire"></div>
+    </div>
+    <div class="result">
+    <div class="gameResult">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+    <audio id="ghostCry">
+	<source src="audio/ghostcry.mp3" type="audio/mp3"></audio>
+    <button class="retry">Retry</button>
+     <button class="menu">Menu</button>
+    </div>
+</body>
+</html>

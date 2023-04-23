@@ -1,0 +1,314 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face
+{
+font-family: 'Dust Serif';
+src: url('Dust Serif.ttf');
+}
+/*@font-face
+{
+font-family: 'DZR INSCRIPTION';
+src: url('DZR INSCRIPTION.ttf');
+}
+@font-face{
+font-family: 'Easy Rider';
+src: url('Easy Rider.ttf');             
+}
+@font-face{
+font-family: 'EG_Dragon_Caps';
+src: url('EG_Dragon_Caps.ttf');             
+}
+@font-face{
+font-family: 'electramaniacal';
+src: url('electramaniacal.ttf');             
+}
+@font-face{
+font-family: 'FetteUNZFraktur';
+src: url('FetteUNZFraktur.ttf');             
+}*/
+@font-face
+{
+font-family: 'Dafunk_FREE';
+src: url('Dafunk_FREE.otf');
+}
+*{margin:0;padding: 0;}
+::selection{
+background:rgba(0,0,0,0);	
+}
+
+    body{
+		overflow:hidden;
+		height:768px;
+		overflow:hidden;
+		background:#6ca;
+		background:-webkit-linear-gradient(tan,#7dc);
+		background:-moz-radial-gradient(#999,#ccc);
+		background:-o-radial-gradient(tan,#7dc);
+		background:-ms-radial-gradient(tan,#7dc);
+	}
+	.intro{
+		font-size:350%;
+		font-weight:bold;	
+		color:green;
+		background:-webkit-radial-gradient(45%,7em 10px,white,#100);
+		background:-moz-radial-gradient(580px 300px, ellipse,rgb(100%,100%,100%) 10%,rgba(60%,50%,60%,.9) 20%, rgba(0%,0%,0%,0.9) 40%);
+		width:100%;
+		height:768px;
+		text-shadow:5px 5px 5px white;
+	}
+	.intro span:first-child{
+	position:absolute;
+	top:-200px;
+	left:270px;
+	font-family: 'Dafunk_FREE';
+	}
+	.intro span:nth-child(2){
+	position:absolute;
+	top:300px;
+	left:100000px;
+	font-family: 'Dafunk_FREE';
+	}
+	.intro span:last-child{
+	position:absolute;
+	top:360px;
+	left:1400px;
+	font-size:70%;
+	color:#96c;
+	font-family: 'Dust Serif';
+	}
+	.entrance{
+		font-family: 'Dafunk_FREE';
+		width:100%;
+		height:100%;
+		display:none;
+		background:url(../images/haunted_house.jpg) no-repeat;
+		float:left;
+    }
+	.entrance h1{
+		font-size: 2em;
+		color: #fff;
+		margin: 9.5% 0 0 12%;
+		transform: perspective(300px) rotate(-3deg);
+	}
+	.entrance .entranceBottons{
+		padding:11% 0 0 13%;
+	}	
+	.entrance span{position:absolute;width:64px;
+				height:64px;cursor:pointer;}
+	.entrance span:hover{opacity:0.7;}			
+	.mute{
+		top:50px;
+		right:100px;
+		background:url(../images/musicOn.png) no-repeat;
+		}
+	.volume{background:url(../images/musicOff.png) no-repeat;}
+	.sound{
+		top:57px;
+		right:200px;
+		background:url(../images/soundOn.png) no-repeat;
+	}
+	.soundOff{background:url(../images/soundOff.png) no-repeat;}
+	.creditsPage{
+	display:none;
+	background:rgba(30,50,40,0.7);	
+	float:left;
+	width:100%;
+	}
+	.creditsPage ul{
+	list-style:none;	
+	padding:40px 0px 0 50px;
+	width:600px;
+	margin:0 auto;
+	text-align:center;
+		
+	}
+	
+	.creditsPage ul li{
+	position:relative;
+	top:200;list-style:none;
+	display:block;	
+	padding:40px 70px 0 70px;
+	font-family: 'Dust Serif';
+	font-size:30px;
+	color:#231243;
+	float:left;
+	}
+	.creditsPage ul li img{
+	border:3px solid #fff;
+	width:80px;
+	height:80px;
+	vertical-align:middle;	
+	margin:0 20px 0 0;
+	}
+	.helpPage{
+	width:100%;
+	margin:1% 15%;
+	float:left;
+	font-size:150%;
+	font-weight:bold;	
+	display:none;
+	}
+    button{
+		 display:block;
+         margin:2%;
+		 color:brown;
+		 background:#ac6;
+		 background:-webkit-linear-gradient(silver,grey);
+		 background:-moz-linear-gradient(#cc2,#ffe);
+		 border-radius:30px 1%;
+		 width:200px;
+         font-size: 16px;
+         box-shadow:5px 5px 10px #a33;
+         font-family: 'Dafunk_FREE';
+		 cursor:url(../images/19.gif),pointer;
+		 letter-spacing:5px;
+         }
+   button:hover{
+		background:#89a;
+        background:-webkit-linear-gradient(grey,silver);
+	    background:-moz-linear-gradient(#ffe,#cc2);
+	    color:gold;
+	    font-size: 18px;
+		box-shadow:0px 0px 25px white;
+		text-shadow:0px 0px 10px blue;
+        }
+	/*.entrance button{
+	transform:rotate(-2deg);
+	-ms-transform:rotate(-2deg); 
+	-webkit-transform:rotate(-2deg);	
+	-moz-transform:rotate(-2deg);
+	}*/
+	.game{
+	background:url('../images/Haunted House.png') no-repeat;
+		//background:url('../images/halloween-haunted-house.jpg') no-repeat;
+		//background:url('../images/haunted_house.jpg');
+		//background:url('../images/haunted-dark.jpg');
+		background-size:100%;	
+		height:768px;
+		cursor:url(../images/2467.png),pointer;
+		display:none;
+		width:100%;
+	}
+	.helpPage .back{
+		margin:-5% 50%;
+	}
+	.ammo{
+	position:absolute;
+	padding:3% 1%;
+	background:url(../images/pistol-m9-500.png) no-repeat;
+	background-size:70%;
+	left:750px;	
+	}
+	div[class^=ghost]{
+	width:2%;
+	height:10px;
+	background:url('../images/ghost.gif') center bottom no-repeat;
+	background-size:contain;
+	position:absolute;
+	display:inline;
+	float:left;
+	//border:1px solid red;
+	}
+	.gun{
+	background:  url(../images/Storm_PSR_First_Person_BOII.png) no-repeat;
+	background-size:contain;
+	position:absolute;
+	top:420px;
+	left:350px;	
+	padding:20%;
+	float:left;
+	}
+	.gunLight{
+	position:relative;
+	top:-220px;
+	left:-250px;
+	width:100px;
+	height:100px;
+	display:none;
+	border-radius:50px;
+	border:1px solid red;
+	}
+	.bulletFire{
+	position:absolute;
+	width:48px;
+	height:48px;
+	background:url(../images/bullet.gif) no-repeat;
+	display:none;
+	}
+	div[class^=blood]{
+	height:3px;
+	width:70%;
+	background:red;	
+	margin:0 auto;
+	display:none;
+	border-radius:10px;
+	}
+	.score{
+	float:right;
+	font-size:200%;
+	color:#acd;
+	font-weight:bold;	
+	}
+	.blud{
+	position:absolute;
+	width:700px;
+	float:left;
+	height:5px;
+	background:blue;
+	border-radius:5px;
+	}
+	.bludBorder{
+		position:absolute;
+		border:2px solid orange;
+		border-radius:5px;
+		width:700px;
+		float:left;
+		top:10px;
+		left:20px;
+		height:5px;
+	}
+	.result{
+	width:100%;
+	background:#6ac;
+	font-size:200%;
+	display:none;
+	padding:15% 0% 30%;
+	text-align:center;
+	}
+	.result button{
+	width:15%;
+	margin:2%;
+	padding:0 3%;
+	display:inline;
+	font-size:50%;
+	}
+	.gameResult{
+	width:45%;
+	letter-spacing:20px;
+	font-family: 'Dafunk_FREE';
+	font-size:28px;
+	margin:0 auto;
+	}
+	audio{
+	display:none;	
+	}
+
+	/*@keyframes ghost
+	{
+0%   {left:0px; top:0px;}
+25%  {left:600px; top:0px;}
+50%  {left:200px; top:200px;}
+75%  {left:0px; top:200px;}
+100% {left:0px; top:0px;}
+}
+
+@-webkit-keyframes ghost
+{
+0%   {left:100px; top:110px;}
+25%  {left:600px; top:510px;}
+50%  {left:400px; top:200px;}
+75%  {left:110px; top:200px;}
+100% {left:101px; top:110px;}
+}
+*/
+	
