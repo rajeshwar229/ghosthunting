@@ -70,8 +70,8 @@ body{
 	margin: 9.5% 0 0 12%;
 	transform: perspective(300px) rotate(-3deg);
 }
-.entrance .entranceBottons{
-	padding:11% 0 0 13%;
+.entrance .entranceButtons{
+	padding: 8% 0 0 12%;
 }	
 .entrance span{
 	position:fixed;
@@ -79,7 +79,10 @@ body{
 	height:35px;
 	cursor:pointer;
 }
-.entrance span:hover{opacity:0.7;}			
+.entrance span:hover{opacity:0.7;}	
+.moreGames {
+    display: contents;
+}		
 .mute{
 	top:2%;
 	right:60px;
@@ -101,18 +104,18 @@ body{
 	background-size : contain;
 }
 .creditsPage{
-display:none;
-background:rgba(30,50,40,0.7);	
-float:left;
-width:100%;
-height: 100%;
+	display:none;
+	background:rgba(30,50,40,0.7);	
+	float:left;
+	width:100%;
+	height: 100%;
 }
 .creditsPage ul{
-list-style:none;	
-padding: 20px 0;
-width:100%;
-margin:0 auto;
-text-align:left;
+	list-style:none;	
+	padding: 20px 0;
+	width:100%;
+	margin:0 auto;
+	text-align:left;
 }
 
 .creditsPage ul li{
@@ -126,128 +129,112 @@ text-align:left;
 	color: #05154f;
 }
 .creditsPage ul li img{
-border:3px solid #fff;
-width:80px;
-height:80px;
-vertical-align:middle;	
-margin:0 20px 0 0;
+	border:3px solid #fff;
+	width:80px;
+	height:80px;
+	vertical-align:middle;	
+	margin:0 20px 0 0;
 }
 .creditsPage .back {
 	margin: 2% auto;
 }
 .helpPage{
-width:100%;
-height: 100%;
-text-align: center;
-font-size:1.5rem;
-font-weight:bold;	
-display:none;
+	width:100%;
+	height: 100%;
+	text-align: center;
+	font-size:1.5rem;
+	font-weight:bold;	
+	display:none;
 }
 .helpPage img{
 	width: 60%;
     margin: 1%;
 }
 button{
-		display:block;
-		margin:2%;
-		color:brown;
-		background:#ac6;
-		background:-webkit-linear-gradient(silver,grey);
-		background:-moz-linear-gradient(#cc2,#ffe);
-		border-radius:30px 1%;
-		width:200px;
-		font-size: 16px;
-		box-shadow:5px 5px 10px #a33;
-		font-family: 'Dafunk_FREE';
-		cursor:url(../images/19.gif),pointer;
-		letter-spacing:5px;
-		}
+	display:block;
+	margin:2%;
+	padding: 0.25%;
+	color:brown;
+	background:#ac6;
+	background:-webkit-linear-gradient(silver,grey);
+	background:-moz-linear-gradient(#cc2,#ffe);
+	border-radius: 10rem 1rem;
+	width: 17%;
+	font-size: 1rem;
+	box-shadow:5px 5px 10px #a33;
+	font-family: 'Dafunk_FREE';
+	cursor:url(../images/19.gif),pointer;
+	letter-spacing: 3px;
+}
 button:hover{
 	background:#89a;
 	background:-webkit-linear-gradient(grey,silver);
 	background:-moz-linear-gradient(#ffe,#cc2);
 	color:gold;
-	font-size: 18px;
+	font-size: 1.2rem;
 	box-shadow:0px 0px 25px white;
 	text-shadow:0px 0px 10px blue;
-	}
+}
 .game{
-background:url('../images/Haunted House.png') no-repeat;
+	background:url('../images/Haunted House.png') no-repeat;
 	background-size: cover;	
 	background-position: center;
 	height:100%;
-	cursor:url(../images/2467.png),pointer;
+	cursor:url(../images/2467.png), pointer;
 	display:none;
 	width:100%;
 }
 .helpPage .back{
 	margin: 1% auto;
 }
-.ammo{
-position:absolute;
-padding:3% 1%;
-background:url(../images/pistol-m9-500.png) no-repeat;
-background-size:70%;
-left:750px;	
-}
 div[data-name^=ghost]{
-width:5%;
-height:5%;
-background:url('../images/ghost.gif') center bottom no-repeat;
-background-size: 10%;
-position:absolute;
-filter: drop-shadow(0 0 5px white);
+	width:5%;
+	height:5%;
+	background:url('../images/ghost.gif') center bottom no-repeat;
+	background-size: 10%;
+	position:absolute;
+	filter: drop-shadow(0 0 5px white);
 }
 .gun{
-background:  url(../images/Storm_PSR_First_Person_BOII.png) no-repeat;
-background-size:contain;
-position:fixed;
-bottom:0;
-left:30%;	
-width: 22%;
-height: 30%;
-}
-.gunLight{
-position:relative;
-top:-220px;
-left:-250px;
-width:100px;
-height:100px;
-display:none;
-border-radius:50px;
-border:1px solid red;
+	background:  url(../images/Storm_PSR_First_Person_BOII.png) no-repeat;
+	background-size:contain;
+	position:fixed;
+	bottom:0;
+	left:30%;	
+	width: 22%;
+	height: 30%;
 }
 .bulletFire{
-position:absolute;
-width:48px;
-height:48px;
-background:url(../images/bullet.gif) no-repeat;
-display:none;
+	position:absolute;
+	width:48px;
+	height:48px;
+	background:url(../images/bullet.gif) no-repeat;
+	display:none;
 }
 div[class^=blood]{
-height:3px;
-width:70%;
-background:red;	
-margin:0 auto;
-display:none;
-border-radius:10px;
+	height:3px;
+	width:70%;
+	background:red;	
+	margin:0 auto;
+	display:none;
+	border-radius:10px;
 }
 .score{
-float:right;
-font-size:200%;
-color:#acd;
-font-weight:bold;	
+	float:right;
+	font-size:2rem;
+	color:#acd;
+	font-weight:bold;	
 }
 .bludParent {
 	width: 60%;
 }
 .blud{
-position:relative;
-width:100%;
-float:left;
-height:5px;
-background:blue;
-border-radius:5px;
+	position:relative;
+	width:100%;
+	float:left;
+	height:5px;
+	background:blue;
+	border-radius:5px;
 }
 .bludBorder{
 	position:relative;
@@ -260,28 +247,28 @@ border-radius:5px;
 	height:5px;
 }
 .result{
-width:100%;
-height: 100%;
-background:#6ac;
-display:none;
-padding:15% 0% 30%;
-text-align:center;
+	width:100%;
+	height: 100%;
+	background:#6ac;
+	display:none;
+	padding:15% 0% 30%;
+	text-align:center;
 }
 .result button{
-width:15%;
-margin:2%;
-padding:0 3%;
-display:inline;
-font-size:1rem;
+	width:15%;
+	margin:2%;
+	padding:0.5% 3%;
+	display:inline;
+	font-size:1rem;
 }
 .gameResult{
-width:45%;
-letter-spacing:20px;
-font-family: 'Dafunk_FREE';
-font-size: 2rem;
-margin:0 auto;
+	width:45%;
+	letter-spacing:20px;
+	font-family: 'Dafunk_FREE';
+	font-size: 2rem;
+	margin:0 auto;
 }
-audio{
+audio {
 	display:none;	
 }
 
@@ -300,7 +287,7 @@ audio{
 		transform: none;
 		text-align: center;
 	}
-	.entrance .entranceBottons {
+	.entrance .entranceButtons {
 		display: grid;
 		padding: 0;
 	}
@@ -314,12 +301,10 @@ audio{
 		width: 100%;
 	}
 	.creditsPage ul li{
-		position: static;
-		display: inline-flex;
-    	padding: 20px 0;
+    	padding: 4% 0;
 		font-size: 1.5rem;
 		justify-content: flex-start;
-    	align-items: center;
+		width: 100%;
 	}
 	.creditsPage ul li img {
 		width: 20%;
@@ -362,24 +347,34 @@ audio{
 		width: 41%;
 		height: 13%;
 	}
+	.score{
+		font-size: 1rem;
+	}
 }
 
 @media (orientation: landscape) and (max-height: 480px) {
 	.intro {
 		font-size: 1.9rem;
 	}
+	button {
+		font-size: 0.8rem;
+		width: 25%;
+	}
+	button:hover {
+		font-size: 0.9rem;
+	}
 	.entrance h1 {
 		font-size: 1.5rem;
 		margin: 8% 0 0 8%;
 	}
-	.entrance .entranceBottons {
-		padding: 5% 0 0 7%;
+	.entrance .entranceButtons {
+		padding: 5% 0 0 8%;
 	}
 	.creditsPage ul {
-		padding: 10px 0;
+		padding: 1% 0;
 	}
 	.creditsPage ul li {
-		padding: 15px;
+		padding: 2%;
 		font-size: 1.5rem;
 	}
 	.creditsPage ul li img {
