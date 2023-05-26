@@ -29,8 +29,8 @@ $(document).ready(function(e){
 
 	const gameResult = function(resultText, finalScore, hscore){
 		$(".gameResult p[data-name='game-result']").html(resultText);
-		$(".gameResult p[data-name=score]").html(`Score: ${finalScore}`);
-		$(".gameResult p[data-name='high-score']").html(`HighScore: ${hscore}`);
+		$(".gameResult p[data-name=score]").html(`Score:${finalScore}`);
+		$(".gameResult p[data-name='high-score']").html(`HighScore:${hscore}`);
 		jQuery.fx.off = true;	
 	}
 
@@ -92,7 +92,7 @@ $(document).ready(function(e){
 					}
 
 					setTimeout(function(){				
-						if($this.children().width()>0){
+						if($this.children().width() > 0){
 							$this.animate({
 									backgroundSize:'90%',
 									width:'+=25%',
