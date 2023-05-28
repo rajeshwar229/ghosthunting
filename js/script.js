@@ -140,7 +140,8 @@ $(document).ready(function(e){
 				gameMusic.currentTime = 0;
 				ghostCry.play();
 				gameResult("GAME OVER", finalScore, localStorage.hscore);
-				$("div[data-name^=ghost]").remove();				
+				$("div[data-name^=ghost]").remove();	
+				clearInterval(ghostCreateInterval);			
 			}
 			$(".retry").click(function(){
 				hideShowPage('result', 'game', 500, 500);
@@ -166,6 +167,7 @@ $(document).ready(function(e){
 								winFlag = false;
 								$(".score").html(`Score: ${score=0}`);
 								$("div[data-name^=ghost]").remove();
+								clearInterval(ghostCreateInterval);
 						},500);
 					}	
 
@@ -206,14 +208,14 @@ $(document).ready(function(e){
 			});
 			}
 		};
-		ghost.create();
-		ghost.shoot();
-		gun.move();
 		
 	$(".play").click(function(){
 		hideShowPage('entrance', 'game', 200, 500);
 		gameMusic.play();
 		entranceMusic.pause();
+		ghost.create();
+		ghost.shoot();
+		gun.move();
 		$(document).on("click", bulletFire);
 	});
 
