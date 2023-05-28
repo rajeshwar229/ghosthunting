@@ -1,114 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <title>Guess My Number</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/cmxform.css">
-    
-    <script src="js/jquery-3.5.1.slim.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/script.js"></script>
-    
+    <meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width, user-scalable=no, shrink-to-fit=yes">
+	<title>The Ghost Hunting</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
 </head>
-<body class="bg-light text-dark">
-    <div class="main container mt-2 mx-auto text-center">
-        <div class="header">
-            <h1 class="text-center">Guess My Number 🔢</h1>
-            <div class="custom-control custom-switch d-inline-flex">
-                <input type="checkbox" class="custom-control-input" id="dark-mode">
-                <label class="custom-control-label" for="dark-mode">Dark Mode</label>
-            </div>
-        </div>
 
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-9 col-lg-6 col-xl-5 setup border rounded p-2 p-md-4  bg-white">
-                <form class="d-flex flex-column setup-form">
-                    <div class="form-group">
-                        <label for="your-name" class="font-weight-bold">Enter your name *</label>
-                        <input type="text" class="form-control" name="your-name" id="your-name" maxlength=30 minlength=1 required placeholder="name...">    
-                    </div>
-                    
-                    <div class="d-inline-flex justify-content-between">
-                        <div class="form-group"> 
-                            <label for="limit-num" class="font-weight-bold">Select limit from 10-40 *</label>
-                            <select name="limit-num" class="form-control" id="limit-num" required>
-                                <option value="10">1 to 10</option>
-                                <option value="20">1 to 20</option>
-                                <option value="30">1 to 30</option>
-                                <option value="40">1 to 40</option>
-                            </select>
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="your-num" class="font-weight-bold">Enter your number *</label>
-                            <input type="number" class="form-control" name="your-num" id="your-num" max=10 min=1 required placeholder="number...">
-                        </div>
-                    </div>
-    
-                    <button class="start-game-btn mt-2 mt-lg-3 btn btn-primary font-weight-bold dim-out" data-parent="setup" data-show="game" disabled>Start Game</button>
-                    <input class="reset-form-btn mt-2 mt-lg-3 btn btn-secondary font-weight-bold" name="reset" type="reset" />
-                    <button class="help-game-btn mt-2 mt-lg-3 btn btn-info font-weight-bold" data-toggle="modal" data-target="#help-modal">Help</button>
-                    <button class="game-stats-btn mt-2 mt-lg-3 btn btn-dark font-weight-bold" data-parent="setup" data-show="statistics">Statistics</button>
-                    <a class="more-games-link mt-3 btn btn-warning font-weight-bold" href="https://rajeshwar229.github.io/games/">More Games</a>
-                </form>
-            </div>
-            <div class="col-12 col-md-11 col-xl-10 game d-none border rounded p-2 p-md-4 bg-white">
-                <h3 class="show-num"></h3>
-                <div class="overlay-numbers position-absolute dim-out bg-dark d-none"></div>
-                <ul class="game-numbers pl-0 mb-0"></ul>
-                <button class="main-menu-btn mx-2 m-sm-3 m-lg-4 btn btn-primary font-weight-bold" data-parent="game" data-show="setup">Main Menu</button>
-                <button class="help-game-btn mx-2 m-sm-3 m-lg-4 btn btn-info font-weight-bold" data-toggle="modal" data-target="#help-modal">Help</button>
-            </div>
-
-            <div class="col-11 col-md-9 col-lg-8 result d-none border rounded p-4 bg-white">
-                <h2 class="result-text m-2"></h2>
-                <button class="main-menu-btn mx-2 m-sm-3 m-lg-4  btn btn-primary font-weight-bold" data-parent="result" data-show="setup">Main Menu</button>
-                <button class="game-stats-btn mx-2 m-sm-3 m-lg-4  btn btn-dark font-weight-bold" data-parent="result" data-show="statistics">Statistics</button>
-            </div>
-
-            <div class="col-11 col-md-9 col-lg-7 col-xl-5 statistics d-none border rounded px-0 py-2 p-sm-4 bg-white">
-                <h2 class="text-primary">Statistics Page</h2>
-                <ul class="list-group font-weight-bold px-sm-2 px-md-4">
-                    <li class="list-group-item text-info">Number of games played 🎮 : <span class="games-played text-dark">0</span></li>
-                    <li class="list-group-item text-info">Number of games won 😀 : <span class="games-won text-dark">0</span></li>
-                    <li class="list-group-item text-info">Number of games lost ☹ : <span class="games-lost text-dark">0</span></li>
-                    <li class="list-group-item text-info">Number of games drawn 😲 : <span class="games-drawn text-dark">0</span></li>
-                </ul>
-                <button class="main-menu-btn m-2 m-lg-4 btn btn-primary font-weight-bold" data-parent="statistics" data-show="setup">Main Menu</button>
-            </div>
-        </div>
-        
+<body>
+    <div class="intro">
+        <span data-name="Rajeshwar">Rajeshwar</span>
+        <span data-name="Chinna">Chinna</span>
+        <span data-name="Presents">Presents</span>
     </div>
-
-    <div class="modal fade text-center" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="help-modal-label" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title text-primary" id="exampleModalLabel">Help Modal</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <p class="modal-body p-3 text-left">
-                The goal of the game is to guess the opponents number, before they guess yours. 
-                At first, you need to select your number(which should be in between the range) and the range of numbers to play. 
-                Once the game starts, you and the system will keep guessing each others numbers in turns.
-                You have to wait for the system till it guesses.
-                Avoid click on your number, or you will loose. You can see your number on top.
-                Whoever guesses correctly first wins the game. If both of you chosen same number, no one wins.
-                Good luck for you and enjoy the game!
-              </p>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
+    <div class="entrance">
+    	<h1>Ghost Hunting</h1>
+		<div class="entranceButtons">
+			<button class="play">Play</button>
+			<button class="credits">Credits</button>
+			<button class="help">Help</button>
+            <button class="full-screen-btn" data-fullscreen="off">Full Screen</button>
+            <a class="moreGames" href="https://rajeshwar229.github.io/games/"><button>More Games</button></a>
+		</div>
+		<span class="mute" title="Music on"></span>
+        <span class="sound" title="Sound on"></span>
+        <audio id="entranceMusic" loop sound=10>
+		    <source src="audio/scr01.mp3" type="audio/mpeg">
+        </audio>
     </div>
-
+    <div class="creditsPage">
+        <ul>
+        	<li><img src="images/credits/pradeep.jpg" alt="Pradeep" title="Na kante Thope evvadu ledikkada" /><span>Pradeep Kumar Lakku</span></li>
+            <li><img src="images/credits/venky.jpg" alt="Venkatesh" title="Assasin's Creed" /><span>Venkatesh Bellala</span></li>
+            <li><img src="images/credits/prakash.jpg" alt="Prakash" title="Nu aapra Jaffaga" /><span>Prakash Kummari</span></li>
+            <li><img src="images/credits/rajesh.jpg" alt="Rajesh" title="Siggu padakra babu" /><span>Rajesh Putta</span></li>
+            <li><img src="images/credits/saikiran.jpg" alt="Sai Kiran" title="Pradeep Gadu Thope Asalu" /><span>Sai Kiran Raparti</span></li>
+            <li><img src="images/credits/tejaswini.jpg" alt="Tejashwini" title="??????" /><span>Tejashwini Dugyala</span></li>
+        </ul>
+         <button class="back">back</button>
+    </div>
+    <div class="helpPage">
+    	<img src="images/helpPage.png" alt="help"/>
+        <p>Shoot the ghosts before they attact you. You will lose some blood if ghost attacks you</p>
+        <button class="back">back</button>
+    </div>
+	<div class="game">
+    	<div class="bludParent">
+            <span class="bludBorder">
+                <span class="blud"></span>
+            </span>
+        </div>
+    	<span class="score">Score:0</span>
+        <button class="menu">Menu</button>
+    	<audio id="gameMusic" loop>
+		<source src="audio/gameBgSound.mp3" type="audio/mp3"></audio>
+        <audio id="gunShoot">
+		<source src="audio/gs.mp3" type="audio/mp3"></audio>
+        <audio id="ghostCome">
+		<source src="audio/zombie3.mp3" type="audio/mp3"></audio>
+        <audio id="ghostDie">
+		<source src="audio/ZombieInPain.mp3" type="audio/mp3"></audio>
+        <audio id="ghostAttack">
+		<source src="audio/ghostAttack.mp3" type="audio/mp3"></audio>
+        <div class="gun"></div>
+        <div class="bulletFire"></div>
+    </div>
+    <div class="result">
+        <div class="gameResult">
+            <p data-name="game-result"></p>
+            <p data-name="score"></p>
+            <p data-name="high-score"></p>
+        </div>
+        <audio id="ghostCry">
+            <source src="audio/ghostcry.mp3" type="audio/mp3">
+        </audio>
+        <button class="retry">Retry</button>
+        <button class="menu">Menu</button>
+    </div>
 </body>
 </html>
