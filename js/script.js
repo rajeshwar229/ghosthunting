@@ -44,7 +44,6 @@ $(document).ready(function(e){
 		ghostIndex = 0;
 		scoreFlag = false;
 		winFlag = false;
-		ghost.create();
 		$(".score").html(`Score: ${score=0}`);
 		$(".blud").css("width",'100%');
 		clearInterval(ghostCreateInterval);
@@ -134,8 +133,7 @@ $(document).ready(function(e){
 		},
 		over:function(){
 			if($(".blud").width() <= 0){
-				$(".game").fadeOut(100);
-				$(".result").fadeIn(2000);
+				hideShowPage('game','result', 1000, 1000);
 				gameMusic.pause();
 				gameMusic.currentTime = 0;
 				ghostCry.play();
@@ -143,12 +141,6 @@ $(document).ready(function(e){
 				$("div[data-name^=ghost]").remove();	
 				clearInterval(ghostCreateInterval);			
 			}
-			$(".retry").click(function(){
-				hideShowPage('result', 'game', 500, 500);
-				resetGame();
-				gameMusic.play();
-				$(document).on("click", bulletFire);
-			});
 		},
 
 		shoot:function(){
@@ -157,7 +149,7 @@ $(document).ready(function(e){
 					let $this = $(this);
 					if(winFlag && $(".blud").width() > 0){
 						shootInterval = setTimeout(function(){
-								hideShowPage('game', 'result', 500, 500);
+								hideShowPage('game', 'result', 1000, 1000);
 								$(`div[data-name^=ghost]:last-child`).remove();
 								gameMusic.pause();
 								gameMusic.currentTime=0;
