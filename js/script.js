@@ -133,7 +133,7 @@ $(document).ready(function(e){
 		},
 		over:function(){
 			if($(".blud").width() <= 0){
-				hideShowPage('game','result', 1000, 1000);
+				hideShowPage('game','result', 2000, 2000);
 				gameMusic.pause();
 				gameMusic.currentTime = 0;
 				ghostCry.play();
@@ -149,7 +149,7 @@ $(document).ready(function(e){
 					let $this = $(this);
 					if(winFlag && $(".blud").width() > 0){
 						shootInterval = setTimeout(function(){
-								hideShowPage('game', 'result', 1000, 1000);
+								hideShowPage('game', 'result', 2000, 2000);
 								$(`div[data-name^=ghost]:last-child`).remove();
 								gameMusic.pause();
 								gameMusic.currentTime=0;
